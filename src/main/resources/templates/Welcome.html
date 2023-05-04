@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>welcome</title>
+<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/css/bootstrap.min.css" />
+<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+<style>
+body {
+	background-color: #cccccc; 
+}
+</style>
+</head>
+<body>
+<div class="container text-center">
+<button><a th:href="@{/login}">Login as User</a></h4></button>
+<br>
+<button><a th:href="@{/login}">Login as manager</a></h4></button>
+</div>
+
+</body>
+</html>

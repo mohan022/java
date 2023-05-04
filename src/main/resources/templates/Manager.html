@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to Banking management</title>
+<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/css/bootstrap.min.css" />
+<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+<style>
+body {
+	background-image: url("images/banking.jpg");
+	/* background-color: #cccccc; */
+}
+</style>
+</head>
+<body>
+	<div>
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="javascript:void(0)">Online Banking</a>
+
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#mynavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="mynavbar">
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item"><a class="nav-link"
+							href="javascript:void(0)"></a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="javascript:void(0)"></a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="javascript:void(0)"></a></li>
+					</ul>
+
+				</div>
+				<br> <a class="navbar-brand" href="javascript:void(0)">Administration</a>
+				<div>
+					<button>
+						<a th:href="@{/logout}">Logout</a>
+					</button>
+
+				</div>
+
+			</div>
+		</nav>
+	</div>
+	<br>
+	<br>
+	</div>
+	
+	<!--  <form class="d-flex" th:action="@{/search/{userId}" >
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-primary" type="button">Search</button>
+      </form> -->
+	
+
+	<div class="container text-centre">
+		<ul class="list-group list-group-horizontal">
+			<li class="list-group-item"><a th:href="@{/customer}"
+				class="list-group-item">Create Customer</a></li>
+			<li class="list-group-item"><a th:href="@{/account}"
+				class="list-group-item">Create Account</a></li>
+			<li class="list-group-item"><a th:href="@{/customerlist}"
+				class="list-group-item">List All Customers</a></li>
+			<li class="list-group-item"><a th:href="@{/transaction}" class="list-group-item">Fund
+					Transfer</a></li>
+		</ul>
+	</div>
+
+
+</body>
+</html>

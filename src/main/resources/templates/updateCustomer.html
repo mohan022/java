@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>List Users</title>
+	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<form th:action="@{/update/{userId}(userId=${customer.userId})}" th:object="${customer}"
+			method="post" style="max-width: 600px; margin: 0 auto;">
+			<div class="m-3"></div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label">User_Id: </label>
+				<div class="col-8">
+					<input type="number" th:field="*{userId}" class="form-control"
+						required pattern=""/>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label">AccountNumber: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{accountNumber}" class="form-control"
+						required minlength="6" maxlength="10" />
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Name: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{name}" class="form-control" required
+						minlength="2" maxlength="20" />
+				</div>
+			</div>
+
+			<div class="form-group row">
+
+
+				<label class="col-4 col-form-label">GENDER: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{gender}" class="form-control"
+						required minlength="2" maxlength="20"/>
+
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Email: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{email}" class="form-control"
+						required />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Contact: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{contact}" class="form-control"
+						required />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label">AadharNo: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{aadharNo}" class="form-control"
+						required />
+				</div>
+			</div>
+
+			<button type="reset" class="btn btn-primary">Reset</button>
+			<button type="submit" class="btn btn-primary">submit</button>
+	</div>
+	</div>
+	</form>
+</body>
+</html>

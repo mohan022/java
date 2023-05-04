@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Sign Up - CodeJava</title>
+<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/css/bootstrap.min.css" />
+<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+		<style>
+body {
+	
+}
+</style>
+</head>
+<body>
+	<div class="container text-center">
+		<div>
+			<h1>Fund Transferr</h1>
+		</div>
+		<form th:action="@{/fundTransfer}" th:object="${transaction}"
+			method="post" style="max-width: 600px; margin: 0 auto;">
+			<div class="m-3"></div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label">SenderAccountNumber: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{senderAccountNumber}" class="form-control"
+						required minlength="6" maxlength="10"/>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-4 col-form-label">BeneficiaryAccountNumber: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{beneficiaryAccountNumber}" class="form-control"
+						required minlength="6" maxlength="10" />
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-4 col-form-label">Amount: </label>
+				<div class="col-8">
+					<input type="text" th:field="*{amount}" class="form-control" required
+						minlength="2" maxlength="20" />
+				</div>
+			</div>
+
+			<button type="reset" class="btn btn-primary">Reset</button>
+			<button type="submit" class="btn btn-primary">submit</button>
+	</div>
+	</div>
+	</form>
+	</div>
+</body>
+</html>
